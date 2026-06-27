@@ -1,0 +1,26 @@
+<section class="player-vision-plus-player-settings-body">
+  <div class="form-group">
+    <label>{{localize "PVPLUS.settings.enabled.name"}}</label>
+    <input type="checkbox" name="enabled" {{checked enabled}} />
+    <p class="notes">{{localize "PVPLUS.settings.enabled.hint"}}</p>
+  </div>
+
+  <div class="form-group stacked">
+    <label>{{localize "PVPLUS.menu.playerSettings.status"}}</label>
+    {{#if statusInactive}}
+      <p class="notes"><strong>{{localize "PVPLUS.menu.playerSettings.statusInactiveLabel"}}</strong> — {{localize "PVPLUS.menu.playerSettings.statusInactive"}}</p>
+    {{/if}}
+    {{#if statusOwnedOnly}}
+      <p class="notes"><strong>{{localize "PVPLUS.menu.playerSettings.statusOwnedOnlyLabel"}}</strong> — {{localize "PVPLUS.menu.playerSettings.statusOwnedOnly"}}</p>
+    {{/if}}
+    {{#if statusAlliedOwned}}
+      <p class="notes"><strong>{{localize "PVPLUS.menu.playerSettings.statusAlliedOwnedLabel"}}</strong> — {{localize "PVPLUS.menu.playerSettings.statusAlliedOwned"}}</p>
+    {{/if}}
+  </div>
+
+  <footer class="sheet-footer flexrow">
+    <button type="submit">
+      <i class="fas fa-save"></i> {{localize "SETTINGS.Save"}}
+    </button>
+  </footer>
+</section>
